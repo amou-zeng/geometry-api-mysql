@@ -9,7 +9,7 @@
 	
 *	数据表`geo_data`包含三个字段，uid代表用户标识，可以是用户名／用户Id，还有两个字段是经纬度。
 *	函数`geoDistanceBetween`返回两个地理位置的距离，单位是米(meters)。
-*	存储过程`geoNeighbourhood`返回两个
+*	存储过程`geoNeighbourhood(uid, meters, rows)`返回用户标识是`uid`，距离`meters(米)`内的`rows`个用户。
 
 使用方法
 ----------------
@@ -17,5 +17,5 @@
 	source geometry-api-mysql.sql
 
 ### 获取附近的人
+	-- 获得用户标示等于1，100米内的附近30个用户
 	call geoNeighbourhood(1, 100, 30);
-	-- 这样就可以获得用户标示等于1，100米内的附近30个用户了
