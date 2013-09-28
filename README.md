@@ -17,5 +17,5 @@
 	source geometry-api-mysql.sql
 
 ### 获取附近的人
-	-- 获得用户标示等于1，100米内的附近30个用户
+	-- 获得用户标识等于1，100米内的附近30个用户
 	call geoNeighbourhood(1, 100, 30);
